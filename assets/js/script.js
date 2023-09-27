@@ -88,7 +88,7 @@ function recalculateTotalAmount() {
 }
 
 function updateSalary(totalAmount) {
-    const salary = totalAmount * 0.2;
+    const salary = totalAmount * 0.02;
     document.getElementById('salary').textContent = salary.toFixed(2);
 }
 

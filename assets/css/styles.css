@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* Стилизация блока с ошибкой */
+#errorBlock {
+  background-color: #ffdddd;
+  border: 1px solid #ff0000;
+  padding: 10px;
+  margin-bottom: 10px;
+  /* Стилизация выделения пустых полей */
+}
+#errorBlock .error-text {
+  color: #ff0000;
+}
+#errorBlock .error-field {
+  border: 1px solid #ff0000;
+}
