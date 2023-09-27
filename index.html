@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Таблица с данными</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Номер заказа</th>
+                <th>Дата Отгрузки</th>
+                <th>Расходная накладная</th>
+                <th>Название сделки</th>
+                <th>Сумма заказа</th>
+                <th>Имя клиента</th>
+                <th>Телефон клиента</th>
+                <th>Стадия сделки</th>
+                <th>Сделка закрыта</th> <!-- Новый заголовок -->
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody id="dataBody">
+            <!-- Здесь будут добавляться строки динамически -->
+        </tbody>
+    </table>
+    <button onclick="addRow()">Добавить строку</button>
+    <button onclick="saveData()">Сохранить</button>
+
+    <!-- Блок для отображения общей суммы заказов, количества сделок и зарплаты -->
+    <div id="summaryBlock">
+        <p>Общая сумма заказов: <span id="totalAmount">0</span></p>
+        <p>Количество сделок: <span id="dealCount">0</span></p>
+        <p>Зарплата: <span id="salary">0</span></p>
+    </div>
+
+    <div id="reportBlock">
+        <h2>Сдать отчёт</h2>
+        <button onclick="confirmGenerateReport()" id="generateReportButton">Сгенерировать отчёт</button>
+    </div>
+    
+    <div id="errorBlock" style="display: none;">
+        <p class="error-text">Заполните все поля перед сохранением данных.</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

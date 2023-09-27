@@ -1,0 +1,16 @@
+/* Стилизация блока с ошибкой */
+#errorBlock {
+    background-color: #ffdddd;
+    border: 1px solid #ff0000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.error-text {
+    color: #ff0000;
+}
+
+/* Стилизация выделения пустых полей */
+.error-field {
+    border: 1px solid #ff0000;
+}
