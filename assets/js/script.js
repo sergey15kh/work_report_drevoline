@@ -32,7 +32,14 @@ function addRowWithData(data) {
         <td><input type="number" name="orderAmount" value="${data[4]}"></td>
         <td><input type="text" name="customerName" value="${data[5]}"></td>
         <td><input type="tel" id="phone" name="phone" placeholder="380 50 149 81 76" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required name="customerPhone" value="${data[6]}"></td>
-        <td><input type="text" name="dealStage" value="${data[7]}"></td>
+        <td>
+        <select name="dealStage">
+            <option value="Постоянный" ${data[7] === "Постоянный" ? 'selected' : ''}>Постоянный</option>
+            <option value="Сайт" ${data[7] === "Сайт" ? 'selected' : ''}>Сайт</option>
+            <option value="OLX" ${data[7] === "OLX" ? 'selected' : ''}>OLX</option>
+            <option value="Сарафанное радио" ${data[7] === "Сарафанное радио" ? 'selected' : ''}>Сарафанное радио</option>
+        </select>
+        </td>
         <td><input type="checkbox" name="closedDeal" ${data[8] ? 'checked' : ''}></td>
         <td><button onclick="deleteRow(this)">Удалить</button></td>
     `;
@@ -40,6 +47,8 @@ function addRowWithData(data) {
     tbody.appendChild(newRow);
     rowNumber++;
 }
+
+
 
 function addRow() {
     const tbody = document.getElementById('dataBody');
